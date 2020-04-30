@@ -3,6 +3,15 @@ package main
 import "fmt"
 
 func main() {
+
+	// if condition_that_evaluates_to_boolean{
+	//      perform action1
+	// }else if condition_that_evaluates_to_boolean{
+	//      perform action2
+	// }else{
+	//      perform action3
+	// }
+
 	price, inStock := 100, true
 
 	if price > 100 {
