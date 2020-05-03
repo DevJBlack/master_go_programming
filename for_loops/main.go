@@ -15,4 +15,9 @@ func main() {
 	for _, name := range devin {
 		fmt.Printf("%q", strings.Split(name, ""))
 	}
+
+	for n := 1; n <= 3; n++ {
+		fmt.Println("Ho! ")
+	}
+	fmt.Println("Merry Christmas!")
 }
