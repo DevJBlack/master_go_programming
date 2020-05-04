@@ -43,25 +43,24 @@ func main() {
 		fmt.Println(i)
 	}
 
-// **BREAK STATEMENT **//
- 
-    // It is used to terminate the innermost for or switch statement.
-    // It works just the same as in C,  Java or Python.
-    
-    // finding 10 numbers divisible by 13 
-    count := 0 
-    for i := 0; true; i++ { // we use true here to run an infinite loop, we can we replace true with 1000 and it will still only print 10 numbers
-        if i%13 == 0 {
-            fmt.Printf("%d is divisible by 13\n", i)
-            count++
-        }
- 
-        if count == 10 { //if 10 numbers were found, break!
-            break //it breaks the current loop (inner loop if there are more loops)
-        }
-    }
- 
-    // the break statement is not terminating the program entirely;
-    fmt.Println("Just a message after the for loop")
-}
+	// **BREAK STATEMENT **//
+
+	// It is used to terminate the innermost for or switch statement.
+	// It works just the same as in C,  Java or Python.
+
+	// finding 10 numbers divisible by 13
+	count := 0
+	for i := 0; true; i++ { // we use true here to run an infinite loop, we can we replace true with 1000 and it will still only print 10 numbers
+		if i%13 == 0 {
+			fmt.Printf("%d is divisible by 13\n", i)
+			count++
+		}
+
+		if count == 10 { //if 10 numbers were found, break!
+			break //it breaks the current loop (inner loop if there are more loops)
+		}
+	}
+
+	// the break statement is not terminating the program entirely;
+	fmt.Println("Just a message after the for loop")
 }
