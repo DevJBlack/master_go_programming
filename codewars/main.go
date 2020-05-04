@@ -14,9 +14,9 @@ func evenOrOdd(number int) string {
 func opposite(value int) int {
 	if value%2 == 0 {
 		return 1 * value
-	} else {
-		return -1 * value
 	}
+	return -1 * value
+
 }
 
 func positiveSum(numbers []int) int {
