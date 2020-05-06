@@ -69,4 +69,32 @@ func main() {
 	m[0] = -1
 	fmt.Println("n is equal to m ", n == m)
 
+	var cities [2]string
+	fmt.Printf("%#v\n", cities)
+
+	grades := [3]float64{4.5, 9.7}
+	fmt.Printf("%#v\n", grades)
+
+	taskDone := [...]bool{true, false, false, true}
+	fmt.Printf("%#v\n", taskDone)
+
+	for i := 0; i < len(cities); i++ {
+		fmt.Println(cities[i])
+	}
+
+	for index, value := range grades {
+		fmt.Println(index, value)
+	}
+
+	numArray := []int{30, -1, -6, 90, -6}
+
+	// positiveNum := 0 // This way is possible
+	var positiveNum int // This is another way
+
+	for _, v := range numArray {
+		if v%2 == 0 && v > 0 {
+			positiveNum++
+		}
+	}
+	fmt.Println("No. of positive numbers in numArray:", positiveNum)
 }
