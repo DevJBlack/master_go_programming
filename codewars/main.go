@@ -65,3 +65,21 @@ func makeMeNegative(x int) int {
 	}
 	return x
 }
+
+func repeatStr(repititions int, value string) (result string) {
+	for i := 0; i < repititions; i++ {
+		result += value
+	}
+	return
+}
+
+func boolToWord(word bool) string {
+	if word == true {
+		return ("Yes")
+	}
+	return ("No")
+}
+
+func boolToWords(word bool) string {
+	return map[bool]string{false: "No", true: "Yes"}[word]
+}
