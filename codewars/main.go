@@ -83,3 +83,14 @@ func boolToWord(word bool) string {
 func boolToWords(word bool) string {
 	return map[bool]string{false: "No", true: "Yes"}[word]
 }
+
+func summation(n int) int {
+
+	count := 0
+
+	for i := 0; i <= n; i++ {
+		count += i
+
+	}
+	return (count)
+}
