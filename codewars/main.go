@@ -1,5 +1,7 @@
 package main
 
+import "strings"
+
 func main() {
 
 }
@@ -93,4 +95,53 @@ func summation(n int) int {
 
 	}
 	return (count)
+
+}
+
+func solution(word string) string {
+	var result = ""
+	for _, c := range word {
+		result = string(c) + result
+	}
+	return (result)
+}
+
+func squareSum(numbers []int) int {
+	count := 0
+
+	for _, v := range numbers {
+		a := v * v
+		count += a
+	}
+	return (count)
+}
+
+func squareSums(numbers []int) int {
+	sum := 0
+
+	for i := 0; i < len(numbers); i++ {
+		sum = sum + (numbers[i] * numbers[i])
+	}
+
+	return sum
+}
+
+func squaresSum(nums []int) (res int) {
+	for _, val := range nums {
+		res += val * val
+	}
+	return res
+}
+
+func removeChar(word string) string {
+	return (word[1 : len(word)-1])
+}
+
+func removesChar(word string) string {
+	return strings.Join(strings.Split(word, "")[1:len(strings.Split(word, ""))-1], "")
+}
+
+func removeChars(word string) string {
+	var newWord = []rune(word)
+	return string(newWord[1 : len(newWord)-1])
 }
