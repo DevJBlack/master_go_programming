@@ -145,3 +145,28 @@ func removeChars(word string) string {
 	var newWord = []rune(word)
 	return string(newWord[1 : len(newWord)-1])
 }
+
+func isDivisible(n, x, y int) bool {
+	return n%x == 0 && n%y == 0
+}
+
+func issDivisible(n, x, y int) bool {
+	return n%x+n%y == 0
+}
+
+func isDivisibles(n, x, y int) bool {
+	var out bool
+
+	if n%x == 0 && n%y == 0 {
+		out = true
+	}
+
+	return out
+}
+
+var greet = func() string { return "hello world!" }
+
+func greets() string {
+	b := "hello world!"
+	return b
+}
