@@ -1,6 +1,10 @@
 package main
 
-import "strings"
+import (
+	"fmt"
+	"strconv"
+	"strings"
+)
 
 func main() {
 
@@ -169,4 +173,71 @@ var greet = func() string { return "hello world!" }
 func greets() string {
 	b := "hello world!"
 	return b
+}
+
+func getCount(strn string) int {
+	count := 0
+
+	vowels := []string{"a", "e", "i", "o", "u"}
+
+	for _, vowel := range vowels {
+		count += strings.Count(strn, vowel)
+	}
+
+	return count
+}
+
+func getCounts(str string) (count int) {
+	for _, c := range str {
+		switch c {
+		case 'a', 'e', 'i', 'o', 'u':
+			count++
+		}
+	}
+	return count
+}
+
+func getsCount(str string) int {
+	count := 0
+	for i := range str {
+		switch str[i] {
+		case 'a', 'e', 'i', 'o', 'u':
+			count++
+		}
+	}
+	return count
+}
+
+func vowel() {
+	//a, e, i, o, u
+	devin := "My name is Devin and I love Golang!"
+
+	count := 0
+
+	for _, vow := range devin {
+
+		if vow == 'a' || vow == 'e' || vow == 'i' || vow == 'o' || vow == 'u' {
+			count++
+		}
+	}
+	fmt.Println("here are the vowels in the string", count)
+
+}
+
+func highAndLow(in string) string {
+	d := strings.Fields(in)
+	min := 0
+	max := 0
+
+	for i, s := range d {
+		n, _ := strconv.Atoi(s)
+		if i == 0 || n < min {
+			min = n
+		}
+		if i == 0 || n > max {
+			max = n
+		}
+	}
+
+	return strconv.Itoa(max) + " " + strconv.Itoa(min)
 }
