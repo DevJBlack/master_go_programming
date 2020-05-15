@@ -86,6 +86,19 @@ func boolToWord(word bool) string {
 	return ("No")
 }
 
+func boooolToWord(word bool) string {
+
+	var maybe string
+
+	switch {
+	case word == true:
+		return "Yes"
+	case word == false:
+		return "No"
+	}
+	return maybe
+}
+
 func boolToWords(word bool) string {
 	return map[bool]string{false: "No", true: "Yes"}[word]
 }
@@ -116,6 +129,15 @@ func squareSum(numbers []int) int {
 	for _, v := range numbers {
 		a := v * v
 		count += a
+	}
+	return (count)
+}
+
+func ssquareSum(numbers []int) int {
+	count := 0
+	for _, v := range numbers {
+		v *= v
+		count += v
 	}
 	return (count)
 }
@@ -240,4 +262,15 @@ func highAndLow(in string) string {
 	}
 
 	return strconv.Itoa(max) + " " + strconv.Itoa(min)
+}
+
+func otherAngle(a int, b int) int {
+	return 180 - (a + b)
+}
+
+func otherAngles(a int, b int) int {
+	var c int
+	c = 180 - a - b
+
+	fmt.Println(c)
 }
