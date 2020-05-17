@@ -272,5 +272,20 @@ func otherAngles(a int, b int) int {
 	var c int
 	c = 180 - a - b
 
-	fmt.Println(c)
+	return (c)
+}
+
+func grow(arr []int) int {
+	if len(arr) == 0 {
+		return 1
+	}
+	return arr[0] * grow(arr[1:])
+}
+
+func grows(arr []int) int {
+	x := 1
+	for _, v := range arr {
+		x *= v
+	}
+	return x
 }
