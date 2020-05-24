@@ -23,7 +23,7 @@ func main() {
 
 	// Declaring a new book value by specifying field: value (order doesn't matter)
 	bestBook := book{title: "Animal Farm", author: "George Orwell", year: 1945}
-	_ = bestBook
+	fmt.Printf("%+v", bestBook)
 
 	//if we create a new struct value by omitting some fields they will be zero-valued according to their type
 	aBook := book{title: "Just a random book"}
