@@ -9,7 +9,7 @@ import (
 func myFunc(n string) int {
 	s, err := strconv.Atoi(n)
 	if err != nil {
-		fmt.Printf("Cannot conver %q to an int", n)
+		fmt.Printf("Cannot convert %q to an int", n)
 		os.Exit(1)
 	}
 
