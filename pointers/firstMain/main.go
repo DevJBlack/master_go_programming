@@ -5,7 +5,7 @@ import "fmt"
 func main() {
 
 	// the & (ampersand) operator also known as address of operator returns the memory address of a variable.
-	name := "Andrei"
+	name := "Devin"
 	fmt.Println(&name) // -> 0xc0000101e0
 
 	//** DECLARING AND INITIALIZING POINTERS **//
