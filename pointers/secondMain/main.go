@@ -1,15 +1,27 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
+
+func change(a *int) *float64 {
+	*a = 100
+	b := 5.5
+	return &b
+}
+
+func changeVar(a int) {
+	a = 66
+}
 
 func main() {
-	a := 5.5
-	p1 := &a
-	pp1 := &p1
-	fmt.Printf("Value of p1: %v, address of p1: %v\n", p1, &p1)
-	fmt.Printf("Value of pp1: %v, address of p1: %v\n", pp1, &pp1)
+	x := 8
+	p := &x
 
-	fmt.Printf("*p1 %v\n", *p1)
+	fmt.Println("Value of x before calling change()", x)
+	change(p)
+	fmt.Println("Value of x before calling change()", x)
+
+	fmt.Println("Value of x before calling changeVar()", x)
+	changeVar(x)
+	fmt.Println("Value of x before calling changVar()", x)
+
 }
