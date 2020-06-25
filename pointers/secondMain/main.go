@@ -18,10 +18,10 @@ func main() {
 
 	fmt.Println("Value of x before calling change()", x)
 	change(p)
-	fmt.Println("Value of x before calling change()", x)
+	fmt.Println("Value of x after calling change()", x)
 
 	fmt.Println("Value of x before calling changeVar()", x)
 	changeVar(x)
-	fmt.Println("Value of x before calling changVar()", x)
+	fmt.Println("Value of x after calling changVar()", x)
 
 }
