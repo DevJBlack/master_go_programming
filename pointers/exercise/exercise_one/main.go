@@ -5,10 +5,10 @@ import "fmt"
 func main() {
 
 	x := 10.10
-	// 1. Do get the address you need to use the & sign
+	// 1. To get the address you need to use the & sign
 	fmt.Printf("The address of x is %p\n", &x)
 
-	// 2. This assigns the address to ptr
+	// 2. This assigns the address to variable ptr
 	ptr := &x
 
 	// 3. We are printing the type which is a float64 and the address

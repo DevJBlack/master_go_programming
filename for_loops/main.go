@@ -16,7 +16,7 @@ func main() {
 		fmt.Printf("%q", strings.Split(name, ""))
 	}
 
-	for n := 1; n <= 3; n++ {
+	for n := 1; n <= 2; n++ {
 		fmt.Println("Ho! ")
 	}
 	fmt.Println("Merry Christmas!")
@@ -27,6 +27,13 @@ func main() {
 	for j >= 0 {
 		fmt.Println(j)
 		j--
+	}
+
+	// Increament up, j has a variable of 0 and we are going to loop over it and go up by one
+	jj := 0
+	for jj <= 10 {
+		fmt.Println(jj)
+		jj++
 	}
 
 	//** CONTINUE STATEMENT **//
@@ -41,6 +48,13 @@ func main() {
 			continue // skipping the remaining code in this iteration
 		}
 		fmt.Println(i)
+	}
+
+	// If you want to print out just the odd numbers you can remove the continue statment
+	for i := 0; i <= 20; i++ {
+		if i%2 != 0 {
+			fmt.Println(i)
+		}
 	}
 
 	// **BREAK STATEMENT **//
@@ -63,4 +77,32 @@ func main() {
 
 	// the break statement is not terminating the program entirely;
 	fmt.Println("Just a message after the for loop")
+
+	// The classic FizzBuzz problem for both looping over slices and then up to a certain number
+
+	fizzBuzz := []int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20}
+
+	for i, name := range fizzBuzz {
+		if name%5 == 0 && name%3 == 0 {
+			fmt.Println("FizzBuzz", i)
+		} else if name%5 == 0 {
+			fmt.Println("Buzz", i)
+		} else if name%3 == 0 {
+			fmt.Println("Fizz", i)
+		} else {
+			fmt.Println(i)
+		}
+	}
+	fmt.Println("================================================")
+	for i := 1; i <= 15; i++ {
+		if i%5 == 0 && i%3 == 0 {
+			fmt.Println("FizzBuzz", i)
+		} else if i%5 == 0 {
+			fmt.Println("Buzz", i)
+		} else if i%3 == 0 {
+			fmt.Println("Fizz", i)
+		} else {
+			fmt.Println(i)
+		}
+	}
 }
