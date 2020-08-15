@@ -289,3 +289,19 @@ func grows(arr []int) int {
 	}
 	return x
 }
+
+func AbbrevName(name string) string {
+	var s []string
+
+	s = append(s, name)
+
+	for _, nn := range s {
+		spnn := strings.Split(nn, " ")
+		firstName := spnn[0]
+		lastName := spnn[1]
+		fmt.Println(firstName[0:1] + "." + lastName[0:1])
+
+	}
+
+	return name
+}
